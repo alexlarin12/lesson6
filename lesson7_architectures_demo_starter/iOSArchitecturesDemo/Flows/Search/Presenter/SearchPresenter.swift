@@ -14,6 +14,8 @@ final class SearchPresenter {
     
     private let searchService = ITunesSearchService()
     
+    
+    
     private func requestApps(with query: String) {
         self.searchService.getApps(forQuery: query) { [weak self] result in
             guard let self = self else { return }
