@@ -1,14 +1,13 @@
 //
-//  SearchView.swift
+//  SearchSongsView.swift
 //  iOSArchitecturesDemo
 //
-//  Created by Evgeny Kireev on 02/06/2019.
-//  Copyright © 2019 ekireev. All rights reserved.
+//  Created by Alex Larin on 01.07.2020.
+//  Copyright © 2020 ekireev. All rights reserved.
 //
 
 import UIKit
-
-final class SearchView: UIView {
+final class SearchSongsView: UIView {
     
     // MARK: - Subviews
     
@@ -16,7 +15,7 @@ final class SearchView: UIView {
     let tableView = UITableView()
     let emptyResultView = UIView()
     let emptyResultLabel = UILabel()
-      
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -37,9 +36,8 @@ final class SearchView: UIView {
         self.addTableView()
         self.addEmptyResultView()
         self.setupConstraints()
-        
     }
-  
+    
     private func addSearchBar() {
         self.searchBar.translatesAutoresizingMaskIntoConstraints = false
         self.searchBar.searchBarStyle = .minimal
@@ -74,7 +72,6 @@ final class SearchView: UIView {
         let safeArea = self.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-                       
             self.searchBar.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0),
             self.searchBar.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
             self.searchBar.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),

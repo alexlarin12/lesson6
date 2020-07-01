@@ -24,7 +24,7 @@ final class SearchViewController: UIViewController {
             self.searchView.searchBar.resignFirstResponder()
         }
     }
-    
+   
     private struct Constants {
         static let reuseIdentifier = "reuseId"
     }
@@ -54,6 +54,7 @@ final class SearchViewController: UIViewController {
         self.searchView.tableView.register(AppCell.self, forCellReuseIdentifier: Constants.reuseIdentifier)
         self.searchView.tableView.delegate = self
         self.searchView.tableView.dataSource = self
+       
     }
     
     override func viewWillDisappear(_ animated: Bool) {
